@@ -55,12 +55,18 @@ public class GameController : MonoBehaviour {
 
     private void PauseGame()
     {
+        // Pause the game state
+        m_GameState = GameState.Paused;
+
         //Show the pause menu
         m_UI.ShowPauseMenu();
     }
 
     private void UnPauseGame()
     {
+        // Pause the game state
+        m_GameState = GameState.Playing;
+
         //Hide the pause menu
         m_UI.HidePauseMenu();
     }
